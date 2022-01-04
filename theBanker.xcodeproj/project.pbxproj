@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ADD08B1A278495FB00D7DAF0 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD08B19278495FB00D7DAF0 /* Tabbar.storyboard */; };
+		ADD08B2527849A5E00D7DAF0 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD08B2427849A5E00D7DAF0 /* TabbarViewController.swift */; };
 		F083FBB5278477B600C237CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F083FBB4278477B600C237CD /* AppDelegate.swift */; };
 		F083FBB7278477B600C237CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F083FBB6278477B600C237CD /* SceneDelegate.swift */; };
 		F083FBB9278477B600C237CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F083FBB8278477B600C237CD /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		ADD08B19278495FB00D7DAF0 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		ADD08B2427849A5E00D7DAF0 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		F083FBB1278477B600C237CD /* theBanker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theBanker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F083FBB4278477B600C237CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F083FBB6278477B600C237CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADD08B1B278498F100D7DAF0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F083FBB4278477B600C237CD /* AppDelegate.swift */,
+				F083FBB6278477B600C237CD /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ADD08B1C2784993600D7DAF0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				ADD08B23278499E300D7DAF0 /* Tabbar */,
+				ADD08B22278499D800D7DAF0 /* Main */,
+				ADD08B21278499B200D7DAF0 /* Statistics */,
+				ADD08B20278499A800D7DAF0 /* Plus */,
+				ADD08B1F2784999700D7DAF0 /* Portfolio */,
+				ADD08B1E2784997100D7DAF0 /* Settings */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		ADD08B1D2784995000D7DAF0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F083FBB8278477B600C237CD /* ViewController.swift */,
+				F083FBBA278477B600C237CD /* Main.storyboard */,
+				F083FBBF278477B700C237CD /* LaunchScreen.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		ADD08B1E2784997100D7DAF0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		ADD08B1F2784999700D7DAF0 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		ADD08B20278499A800D7DAF0 /* Plus */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plus;
+			sourceTree = "<group>";
+		};
+		ADD08B21278499B200D7DAF0 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		ADD08B22278499D800D7DAF0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		ADD08B23278499E300D7DAF0 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				ADD08B19278495FB00D7DAF0 /* Tabbar.storyboard */,
+				ADD08B2427849A5E00D7DAF0 /* TabbarViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 		F083FBA8278477B600C237CD = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +179,11 @@
 		F083FBB3278477B600C237CD /* theBanker */ = {
 			isa = PBXGroup;
 			children = (
-				F083FBB4278477B600C237CD /* AppDelegate.swift */,
-				F083FBB6278477B600C237CD /* SceneDelegate.swift */,
-				F083FBB8278477B600C237CD /* ViewController.swift */,
-				F083FBBA278477B600C237CD /* Main.storyboard */,
+				ADD08B1B278498F100D7DAF0 /* Core */,
+				ADD08B1D2784995000D7DAF0 /* Main */,
+				ADD08B1C2784993600D7DAF0 /* Screens */,
 				F083FBBD278477B700C237CD /* Assets.xcassets */,
-				F083FBBF278477B700C237CD /* LaunchScreen.storyboard */,
 				F083FBC2278477B700C237CD /* Info.plist */,
-				ADD08B19278495FB00D7DAF0 /* Tabbar.storyboard */,
 			);
 			path = theBanker;
 			sourceTree = "<group>";
@@ -262,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD08B2527849A5E00D7DAF0 /* TabbarViewController.swift in Sources */,
 				F083FBB9278477B600C237CD /* ViewController.swift in Sources */,
 				F083FBB5278477B600C237CD /* AppDelegate.swift in Sources */,
 				F083FBB7278477B600C237CD /* SceneDelegate.swift in Sources */,
