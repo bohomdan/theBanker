@@ -1,20 +1,17 @@
 //
-//  SettingsViewController.swift
+//  MainViewController.swift
 //  theBanker
 //
-//  Created by MN on 07.01.2022.
+//  Created by MN on 08.01.2022.
 //  Copyright © 2022 SmartHub. All rights reserved.
 //
 
 import UIKit
 
-class TabbarViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
-        self.navigationItem.hidesBackButton = true
-        self.navigationItem.hidesBackButton = true
         self.navigationItem.hidesBackButton = true
         self.navigationItem.hidesBackButton = true
         self.navigationItem.hidesBackButton = true

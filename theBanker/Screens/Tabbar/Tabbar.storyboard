@@ -56,26 +56,59 @@
             </objects>
             <point key="canvasLocation" x="1128" y="1227"/>
         </scene>
-        <!--Настройки-->
+        <!--Settings View Controller-->
         <scene sceneID="xXW-BB-NfA">
             <objects>
-                <viewController id="rbG-QU-bpD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Settings" id="rbG-QU-bpD" customClass="SettingsViewController" customModule="theBanker" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJY-TK-Zwi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIw-AT-weh">
+                                <rect key="frame" x="184" y="467" width="48" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Exit"/>
+                                <connections>
+                                    <action selector="LogOutButton:" destination="rbG-QU-bpD" eventType="touchUpInside" id="d9o-5f-mxC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Этот vc и тот что слева Не Работают" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiU-3J-SN5">
+                                <rect key="frame" x="61" y="438" width="292" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3u7-Bb-kvO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Настройки" image="gear" catalog="system" id="yfP-fM-u1b"/>
+                    <navigationItem key="navigationItem" id="dgL-qs-NWn">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="UsP-wg-frN">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Mrw-GC-zld">
+                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Выход"/>
+                            </button>
+                            <connections>
+                                <action selector="LogOut:" destination="rbG-QU-bpD" id="J34-Xg-2It"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="welcomeInLabel" destination="MiU-3J-SN5" id="fmJ-ef-tRN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDo-yP-vVz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2084" y="1227"/>
+            <point key="canvasLocation" x="4758" y="2131"/>
         </scene>
         <!--Главная-->
         <scene sceneID="Roa-Z8-Hvq">
             <objects>
-                <viewController id="9bG-h4-l0t" sceneMemberID="viewController">
+                <viewController id="9bG-h4-l0t" customClass="MainViewController" customModule="theBanker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qu9-hV-Vwu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="-1638" y="1228"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar Controller-->
         <scene sceneID="Rsa-se-pnK">
             <objects>
-                <tabBarController id="vgl-Si-OH7" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Tabbar" id="vgl-Si-OH7" customClass="TabbarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u7w-8B-sh0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -102,7 +135,7 @@
                         <segue destination="izH-i2-B1T" kind="relationship" relationship="viewControllers" id="O7q-fG-TbD"/>
                         <segue destination="pRr-RF-CYq" kind="relationship" relationship="viewControllers" id="l0L-lY-C0x"/>
                         <segue destination="fIu-dg-cQV" kind="relationship" relationship="viewControllers" id="B5A-yO-6ac"/>
-                        <segue destination="rbG-QU-bpD" kind="relationship" relationship="viewControllers" id="MHX-SA-6e1"/>
+                        <segue destination="FQE-TD-Qkh" kind="relationship" relationship="viewControllers" id="OeK-io-rty"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4R-w9-56d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -249,7 +282,7 @@
                                 <rect key="frame" x="0.0" y="217" width="414" height="596"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="83" id="9f6-ZJ-VuU" customClass="SettingsTableViewCell" customModule="The_Banker_v1" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="83" id="9f6-ZJ-VuU" customClass="SettingsTableViewCell" customModule="theBanker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9f6-ZJ-VuU" id="pW2-Wf-wyO">
@@ -479,6 +512,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gx3-vX-1ty" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="899" y="2132"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="ViZ-0g-7NI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ajO-Ek-h1M" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Настройки" image="gear" catalog="system" id="yfP-fM-u1b"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nZz-a0-i5g">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rbG-QU-bpD" kind="relationship" relationship="rootViewController" id="MhX-3F-wf2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cbb-4W-6Gd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3848" y="2131"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="wRT-Vc-7LX">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="zto-YS-jF6" customClass="HomeViewController" customModule="SocialNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AHI-bk-tKJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome In User" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai7-Yj-as5">
+                                <rect key="frame" x="47" y="363" width="321" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="48"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WZq-PG-12k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FZe-QQ-cUk">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="KWx-DK-ZD9">
+                            <color key="tintColor" red="0.25098039220000001" green="0.50196078430000002" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="logOutButton_Tapped:" destination="zto-YS-jF6" id="1U9-tH-wvT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="welcomeInLabel" destination="Ai7-Yj-as5" id="wUv-2K-gFk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ao5-Se-9nD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2955" y="1227"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="ocJ-Ih-6tM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FQE-TD-Qkh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Настройки" image="gear" catalog="system" id="mVG-wV-i2o"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ON4-PO-TOn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zto-YS-jF6" kind="relationship" relationship="rootViewController" id="kJw-Qz-l3u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nmV-hY-Fzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045" y="1227"/>
         </scene>
     </scenes>
     <resources>
