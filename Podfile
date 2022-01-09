@@ -9,6 +9,10 @@ target 'theBanker' do
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'Firebase/Messaging'
+pod 'Firebase/Storage'
+pod 'Firebase/Firestore'
+pod 'Firebase/Core'
 
   target 'theBankerTests' do
     inherit! :search_paths

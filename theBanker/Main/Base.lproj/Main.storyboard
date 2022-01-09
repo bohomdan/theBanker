@@ -122,7 +122,7 @@
                                 <rect key="frame" x="57" y="238" width="300" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy2-YR-8Jj">
                                 <rect key="frame" x="57" y="308" width="300" height="50"/>
@@ -384,7 +384,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="orE-ac-z1M"/>
+        <segue reference="sZ2-mf-3px"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bgLogin2" width="750" height="1624"/>

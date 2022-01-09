@@ -25,6 +25,8 @@
 		ADF0D6A22789D06F009A2E31 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0D6A12789D06F009A2E31 /* MainViewController.swift */; };
 		ADF0D6A42789D323009A2E31 /* NavControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0D6A32789D323009A2E31 /* NavControllerViewController.swift */; };
 		ADF0D6A62789D341009A2E31 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0D6A52789D341009A2E31 /* ButtonViewController.swift */; };
+		ADF0D6AD278B50E5009A2E31 /* PushNotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0D6AB278B50E5009A2E31 /* PushNotificationSender.swift */; };
+		ADF0D6AE278B50E5009A2E31 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0D6AC278B50E5009A2E31 /* PushNotificationManager.swift */; };
 		F083FBB5278477B600C237CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F083FBB4278477B600C237CD /* AppDelegate.swift */; };
 		F083FBB7278477B600C237CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F083FBB6278477B600C237CD /* SceneDelegate.swift */; };
 		F083FBB9278477B600C237CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F083FBB8278477B600C237CD /* ViewController.swift */; };
@@ -76,6 +78,8 @@
 		ADF0D6A12789D06F009A2E31 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ADF0D6A32789D323009A2E31 /* NavControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavControllerViewController.swift; sourceTree = "<group>"; };
 		ADF0D6A52789D341009A2E31 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		ADF0D6AB278B50E5009A2E31 /* PushNotificationSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationSender.swift; sourceTree = "<group>"; };
+		ADF0D6AC278B50E5009A2E31 /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
 		CAED606C5C9EE47DFE89E3E1 /* Pods-theBanker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theBanker.release.xcconfig"; path = "Target Support Files/Pods-theBanker/Pods-theBanker.release.xcconfig"; sourceTree = "<group>"; };
 		D6E622D1DCB2FC56FF349AF4 /* Pods_theBankerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theBankerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F083FBB1278477B600C237CD /* theBanker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theBanker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,9 +179,10 @@
 				ADF0D6A52789D341009A2E31 /* ButtonViewController.swift */,
 				ADD08B402787232600D7DAF0 /* Extensions.swift */,
 				ADD08B412787232600D7DAF0 /* Service.swift */,
-				ADD08B422787232600D7DAF0 /* SocialNetwork.xcdatamodeld */,
+				F083FBB8278477B600C237CD /* ViewController.swift */,
 				F083FBBA278477B600C237CD /* Main.storyboard */,
 				F083FBBF278477B700C237CD /* LaunchScreen.storyboard */,
+				ADD08B422787232600D7DAF0 /* SocialNetwork.xcdatamodeld */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -239,6 +244,15 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		ADF0D6AA278B50A8009A2E31 /* PushNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				ADF0D6AC278B50E5009A2E31 /* PushNotificationManager.swift */,
+				ADF0D6AB278B50E5009A2E31 /* PushNotificationSender.swift */,
+			);
+			path = PushNotifications;
+			sourceTree = "<group>";
+		};
 		F083FBA8278477B600C237CD = {
 			isa = PBXGroup;
 			children = (
@@ -267,7 +281,7 @@
 			children = (
 				ADD08B262784CF7B00D7DAF0 /* theBanker.entitlements */,
 				ADD08B1B278498F100D7DAF0 /* Core */,
-				F083FBB8278477B600C237CD /* ViewController.swift */,
+				ADF0D6AA278B50A8009A2E31 /* PushNotifications */,
 				ADD08B372787215B00D7DAF0 /* Auth */,
 				ADD08B1D2784995000D7DAF0 /* Main */,
 				ADD08B1C2784993600D7DAF0 /* Screens */,
@@ -537,10 +551,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADF0D6A62789D341009A2E31 /* ButtonViewController.swift in Sources */,
+				ADF0D6AD278B50E5009A2E31 /* PushNotificationSender.swift in Sources */,
 				ADD08B462787232600D7DAF0 /* SocialNetwork.xcdatamodeld in Sources */,
 				ADD08B3F2787230800D7DAF0 /* ForgotPassViewController.swift in Sources */,
 				ADD08B442787232600D7DAF0 /* Extensions.swift in Sources */,
 				ADD08B2527849A5E00D7DAF0 /* TabbarViewController.swift in Sources */,
+				ADF0D6AE278B50E5009A2E31 /* PushNotificationManager.swift in Sources */,
 				ADD08B3E2787230800D7DAF0 /* SignUpViewController.swift in Sources */,
 				ADD08B392787218B00D7DAF0 /* WelcomeViewController.swift in Sources */,
 				ADD08B3D2787230800D7DAF0 /* SignInViewController.swift in Sources */,

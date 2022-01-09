@@ -17,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let pushManager = PushNotificationManager(userID: "currently_logged_in_user_id")
+        pushManager.registerForPushNotifications()
+
+
+        let sender = PushNotificationSender()
+        sender.sendPushNotification(to: "token", title: "Notification title", body: "Notification body")
+    
         // Override point for customization after application launch.
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
